@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build and filter output",
+      "type": "shell",
+      "command": "gradlew assembleDebug | findstr /V \"setlocal set DEFAULT_JVM_OPTS set DIRNAME set APP_BASE_NAME set APP_HOME goto findJavaFromJavaHome set JAVA_HOME set JAVA_EXE init win9xME_args 4NT_args set CMD_LINE_ARGS set _SKIP execute set CLASSPATH mainEnd endlocal\"",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
