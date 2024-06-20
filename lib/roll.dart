@@ -1,4 +1,5 @@
 import 'package:dice_app/custom%20file/style_text.dart';
+import 'package:dice_app/dice_roller.dart';
 import 'package:flutter/material.dart';
 
 const startAlignment = Alignment.topLeft;
@@ -10,8 +11,11 @@ class MyApp extends StatelessWidget {
   const MyApp.helmet({super.key})
       : color1 = Colors.red,
         color2 = Colors.yellow;
+
   final Color color1;
   final Color color2;
+
+  void rollDice() {}
 
   @override
   Widget build(context) {
@@ -26,19 +30,8 @@ class MyApp extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: Column(
-        children: [
-          Center(
-            child: Image.asset(
-              'assets/images/dice-2.png',
-              width: 200,
-            ),
-          ),
-          TextButton(
-            onPressed: (){},
-            child: Text('Roll dice'),
-          ),
-        ],
+      child: Center(
+        child: DiceRoller(),
       ),
     );
   }
